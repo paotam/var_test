@@ -1,0 +1,5 @@
+---
+- host: all
+  become: yes
+  roles:
+    - role: var_test
