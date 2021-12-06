@@ -1,7 +1,8 @@
 ---
 - hosts: all
   gather_facts: false
-
+  var:
+    code_name: "CODE NAME"
   tasks:
     - shell: |-
         echo "{{ code_name }}"
