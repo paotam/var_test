@@ -1,6 +1,7 @@
 ---
 - hosts: all
   gather_facts: false
+  become: yes
   vars:
     code_name: "CODE NAME"
   tasks:
