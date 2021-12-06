@@ -1,5 +1,10 @@
 ---
-- host: all
-  become: yes
-  roles:
-    - role: var_test
+- hosts: all
+  gather_facts: false
+
+  tasks:
+    - shell: |-
+        echo "{{ code_name }}"
+      register: res
+
+    - debug: var=res.stdout_lines
